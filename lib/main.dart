@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:app_tiempo/paginas/weather_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -9,6 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Define la lista de ciudades aquí
+    List<String> ciudades = ['Madrid'];
+
     return MaterialApp(
       title: 'Applicación Meteorológica',
       theme: ThemeData(
@@ -16,8 +20,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const WeatherPage(title: 'Applicación Meteorológica'),
+      // Pasa la lista de ciudades como argumento al widget WeatherPage
+      home: WeatherPage(title: 'Applicación Meteorológica', ciudades: ciudades),
     );
   }
 }
-
