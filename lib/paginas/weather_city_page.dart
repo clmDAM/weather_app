@@ -45,9 +45,13 @@ class _WeatherCityPageState extends State<WeatherCityPage> {
     } else {
       return SingleChildScrollView(
         child: Column(
+          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.08,
+            ),
             _ubicacion(),
             _tiempoActual(),
             SizedBox(
@@ -170,10 +174,10 @@ class _WeatherCityPageState extends State<WeatherCityPage> {
         color: const Color.fromARGB(100, 235, 235, 235),
         borderRadius: BorderRadius.circular(20),
       ),
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(15.0),
       child: Row(
         mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Column(
@@ -208,7 +212,7 @@ class _WeatherCityPageState extends State<WeatherCityPage> {
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "Max: ${_tiempo?.tempMax?.celsius?.toStringAsFixed(0)}ºC",
