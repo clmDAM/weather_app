@@ -91,7 +91,7 @@ class _WeatherPageState extends State<WeatherPage> {
       duration: const Duration(milliseconds: 150),
       margin: const EdgeInsets.symmetric(horizontal: 8.0),
       height: 8.0,
-      width: isActive ? 8.0 : 8.0,
+      width: 8.0,
       decoration: BoxDecoration(
         color: isActive ? Colors.white : Colors.white54,
         borderRadius: const BorderRadius.all(Radius.circular(12)),
